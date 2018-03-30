@@ -49,30 +49,47 @@ public class Main {
         its purpose is to determine if the argument passed to the method is
         an even number or not.
         return true if its an even number, otherwise return false
+
+        modify the while loop
+        make it also record the total number of even numbers it has found
+        and brake once 5 are found
          */
 
         int number = 4;
+        int evenNumbersFound = 0;
         int finnishnumber = 20;
 
         while(number <= finnishnumber)
         {
             number++;
-            if (!isEvenNumber(number)){
-                continue;
+            if (isEvenNumber(number))
+            {
+                System.out.println(number+ " is even ");
+                evenNumbersFound++;
+
+                if(evenNumbersFound==5){
+                    break;
+                }
             }
-            System.out.println("even number "+number);
+            else {
+
+                System.out.println(number+ " is not even ");
+            }
+
 
         }
+
+        System.out.println("number of even numbers found is "+ evenNumbersFound);
 
 
     }
     public static boolean isEvenNumber(int count){
-        if(count%2 == 0 ){
-            return true;
+        if(count%2 != 0 ){
+            return false;
         }
         else
         {
-            return false ;
+            return true ;
         }
     }
 }
