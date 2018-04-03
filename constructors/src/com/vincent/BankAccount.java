@@ -1,12 +1,28 @@
 package com.vincent;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 public class BankAccount {
 
-    private int AccountNumber;
+    private String AccountNumber;
     private int Balance;
     private String coustomer;
     private String email;
-    private int phoneNumber;
+    private double phoneNumber;
+
+
+    public BankAccount(){
+        System.out.println("empty constructor");
+    }
+    public BankAccount(String AccountNumber, int Balance, String coustomer ,String email,double phoneNumber ){
+
+        this.Balance = Balance;
+        this.AccountNumber = AccountNumber;
+        this.coustomer = coustomer;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+
+    }
 
 
 
@@ -30,11 +46,11 @@ public class BankAccount {
         }
     }
 
-    public void setAccountNumber(int accountNumber){
+    public void setAccountNumber(String accountNumber){
         this.AccountNumber = accountNumber;
     }
 
-    public int getAccountNumber() {
+    public String getAccountNumber() {
         return this.AccountNumber;
     }
 
@@ -62,11 +78,11 @@ public class BankAccount {
         return this.email;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(double phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getPhoneNumber() {
+    public double getPhoneNumber() {
         return this.phoneNumber;
     }
 }

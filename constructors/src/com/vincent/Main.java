@@ -1,5 +1,7 @@
 package com.vincent;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,7 +21,10 @@ public class Main {
 
          */
 
-        BankAccount vincent = new BankAccount();
+        BankAccount vincent = new BankAccount("525252",500,"vincent","vincent@gmail.com",8651425);
+
+
+
         vincent.depsoit(100000);
         vincent.withdraw(100);
         vincent.depsoit(50);
