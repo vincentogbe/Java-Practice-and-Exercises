@@ -1,6 +1,8 @@
 package com.vincent;
 
 public class Player {
+
+    /*
     public String name;
     public int health;
     public String weapon;
@@ -14,5 +16,5 @@ public class Player {
     public int healthRemaining(){
         return this.health;
     }
-
+*/
 }
